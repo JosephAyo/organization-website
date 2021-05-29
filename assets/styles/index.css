@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #414243;
+  padding: 14px 0;
+
+  font-family: "Noto Serif", serif;
+}
+.vertical_center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.culture_view {
+  /* The image used */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.557), rgba(0, 0, 0, 0.557)), url("https://i.picsum.photos/id/738/800/800.jpg?hmac=SLz5VaRHx5u0zqByAyRZav-a-PsenqMuWL5kCY5plZ0");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.sidebar {
+  border-right: 1px solid #ffffff;
+  padding: 0;
+}
+.tab-ul {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.tab-ul > li {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tab_item {
+  color: #414243;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tab_nav_arrow {
+  color: inherit;
+  cursor: pointer;
+}
+
+.tab_name {
+  font-size: inherit;
+  color: #414243;
+  width: 90%;
+}
+
+.tab_name_text {
+  font-size: inherit;
+  color: inherit;
+  text-align: center;
+}
+
+.tab_nav_arrow > p,
+.tab_name_text {
+  margin: 14px 0 !important;
+}
+
+.active_tab,
+.tab_name:hover,
+.tab_nav_arrow:hover {
+  color: #0f9b8f;
+}
+.active_tab {
+  font-size: 20px;
+}
+
+.tab_name_text > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active_dot {
+  position: relative;
+  right: -28%;
+  display: none;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tab_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  min-height: 70vh;
+}
+
+.tab_content > div {
+  color: #ffffff;
+  width: 90%;
+}
+
+.slider_view {
+  width: 100%;
+  margin: 2rem 0;
+}
+.sliders_container {
+  height: 350px;
+}
+.sliders_container > .row {
+  height: 100%;
+}
+.slider_text_col {
+  height: 100%;
+}
+.slider_text_container {
+  background-color: #0f9b8f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.slider_text {
+  width: 80%;
+  color: #ffffff;
+  padding: 40px 40px 0 0;
+}
+.slider_text_title {
+  font-weight: 600;
+}
+.slider_text_body {
+  font-size: 10px;
+}
+.slider_learn_more {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 4rem;
+}
+.slider_learn_more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: right;
+  padding: 0 70px;
+}
+.slider_learn_more > hr {
+  width: 40%;
+}
+.slider_learn_more > p {
+  font-size: 12px;
+  margin: 0;
+}
+.slider_image_container {
+  padding: 0;
+  height: 100%;
+}
+.slider_image_container > img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.my_carousel_control {
+  /* position: relative !important; */
+  height: 20px;
+  width: 20px;
+  margin-top: 24%;
+  margin-left: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: none !important;
+}
+.control_to_left {
+}
+.control_to_right {
+  left: 20px !important;
+}
+
+.control_to_left,
+.control_to_right {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .active_dot {
+    display: none;
+  }
+  .sidebar {
+    border-right: none;
+  }
+
+  .tab_nav_arrow {
+    -ms-transform: rotate(270deg); /* IE 9 */
+    transform: rotate(270deg);
+  }
+
+  .tab-ul {
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+  }
+
+  .tab-ul > li {
+    margin: 0 4px;
+    font-size: 12px;
+  }
+
+  .active_tab {
+    font-size: 12px;
+  }
+
+  .tab_content {
+    min-height: 45vh;
+  }
+  .my_carousel_control {
+    margin-top: 76px;
+    margin-left: 8%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .active_dot {
+    display: none;
+  }
+  .sidebar {
+    border-right: none;
+  }
+  .my_carousel_control {
+    margin-top: 12%;
+    margin-left: 8%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .active_dot {
+    right: -13px;
+  }
+  .active_tracked {
+    display: inline;
+  }
+  .sidebar {
+    border-right: 1px solid #ffffff;
+  }
+  .my_carousel_control {
+    margin-top: 42%;
+    margin-left: 8%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .active_dot {
+    right: -13px;
+  }
+  .active_tracked {
+    display: inline;
+  }
+  .sidebar {
+    border-right: 1px solid #ffffff;
+  }
+  .my_carousel_control {
+    margin-top: 31%;
+    margin-left: 6%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .active_dot {
+    right: -13px;
+  }
+  .active_tracked {
+    display: inline;
+  }
+  .sidebar {
+    border-right: 1px solid #ffffff;
+  }
+  .my_carousel_control {
+    margin-top: 24%;
+    margin-left: 6%;
+  }
+}
